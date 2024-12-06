@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect to Local Server Chrome Extension</title>
+    <title>Redirect to Local Server Extension</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>🌟 Redirect to Local Server Chrome Extension 🌟</h1>
-            <p class="subtitle">Simplify your workflow by seamlessly redirecting API requests from live frontend to your local backend.</p>
+        <header>
+            <h1>Redirect to Local Server Chrome Extension</h1>
         </header>
+        <section class="intro">
+            <p>
+                This is a powerful Chrome extension designed to simplify the workflow for developers working with live frontend applications and local backend servers. By enabling seamless redirection of API requests from the live frontend to your local server.
+            </p>
+            <p>
+                With this extension, developers can bypass the need for tools like Postman and Insomnia to test and debug API requests. Instead, you can test, debug, and integrate local backend server directly within your browser while maintaining the full functionality of a live frontend. 🚀
+            </p>
+        </section>
 
         <section class="features">
-            <h2>🎯 Key Features</h2>
+            <h2>🎯 Key Features:</h2>
             <ul>
                 <li>Seamlessly connect your live frontend to a local server for real-time API testing.</li>
                 <li>Eliminate the need for tools like Postman or Insomnia by directly handling API requests in your browser.</li>
-                <li>Use placeholders (<code>#</code>) to dynamically support paths and query parameters for flexible redirection.</li>
-                <li>Redirect multiple APIs with a single placeholder for easier management.</li>
-                <li>Control which APIs and features are active with simple ON/OFF toggle buttons.</li>
+                <li>Use placeholders (#) to dynamically support paths and query parameters for flexible redirection.</li>
+                <li>Redirect a group of APIs with a single placeholder (#) for easier management.</li>
+                <li>Control which APIs and features are active with simple ON/OFF buttons for the extension.</li>
             </ul>
         </section>
 
-        <section class="how-to-add">
+        <section class="add-redirect">
             <h2>🎯 How to Add a Redirect</h2>
             <ol>
-                <li>Click on the yellow <strong>(+)</strong> icon.</li>
+                <li><strong>Click on the Yellow (+) icon.</strong></li>
                 <li>Enter the following details:
                     <ul>
                         <li><strong>From URL:</strong> The live/staging API URL (e.g., <code>https://live-api.com/api/users</code>).</li>
@@ -36,84 +43,59 @@
                     </ul>
                 </li>
                 <li>Click <strong>Add Redirect</strong>.</li>
-                <li>Use the <strong>ON/OFF toggle</strong> to control the extension and APIs.</li>
-                <li>When APIs are redirected, a blue popup message will appear in the bottom-right corner.</li>
+                <li>Use the <strong>ON/OFF Toggle buttons</strong> to control the Extension and APIs.</li>
+                <li>When APIs are redirected to the local server, a <strong>blue popup message</strong> will appear in the bottom-right corner.</li>
             </ol>
         </section>
 
         <section class="examples">
             <h2>📚 Examples: Redirecting Requests</h2>
-            <div class="example">
-                <h3>Example 1: Basic Redirects</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Live URL (From)</th>
-                            <th>Local URL (To)</th>
-                            <th>Method</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>GET https://live-api.com/api/add</td>
-                            <td>GET http://localhost:3000/api/add</td>
-                            <td>GET</td>
-                        </tr>
-                        <tr>
-                            <td>PUT https://live-api.com/api/update</td>
-                            <td>PUT http://localhost:5000/api/update</td>
-                            <td>PUT</td>
-                        </tr>
-                        <tr>
-                            <td>DELETE https://live-api.com/api/remove</td>
-                            <td>DELETE http://localhost:3000/api/remove</td>
-                            <td>DELETE</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="example">
-                <h3>Example 2: Handling Dynamic Path and Query Parameters</h3>
-                <p>Redirects with placeholders (<code>#</code>) let you dynamically match and replace parts of the URL.</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Live URL (From)</th>
-                            <th>Local URL (To)</th>
-                            <th>Method</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>GET https://live-api.com/api/user/#/profile</td>
-                            <td>GET http://localhost:3000/api/user/#/profile</td>
-                            <td>GET</td>
-                        </tr>
-                        <tr>
-                            <td>DELETE https://live-api.com/api/item?id=#</td>
-                            <td>DELETE http://localhost:3000/api/item?id=#</td>
-                            <td>DELETE</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h3>Example 1: Basic Redirects</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Live URL (From)</th>
+                        <th>Local URL (To)</th>
+                        <th>Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GET https://live-api.com/api/add</td>
+                        <td>GET http://some-other-server/api2/add</td>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <td>GET https://live-api.com/api/users</td>
+                        <td>GET https://localhost:3000/api/users</td>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <td>PUT https://live-api.com/api/update</td>
+                        <td>PUT http://localhost:5000/api/update</td>
+                        <td>PUT</td>
+                    </tr>
+                    <tr>
+                        <td>DELETE https://live-api.com/api/remove</td>
+                        <td>DELETE http://localhost:3000/api/remove</td>
+                        <td>DELETE</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section class="troubleshooting">
             <h2>🔧 Troubleshooting Tips</h2>
             <ul>
-                <li>Ensure your <strong>local server is running</strong> and accessible.</li>
-                <li>Verify that the <strong>From URL</strong>, <strong>To URL</strong>, and <strong>Method</strong> are configured correctly.</li>
-                <li>Use <strong>Developer Tools → Network Tab</strong> in your browser to check redirected requests.</li>
+                <li>Make sure your <strong>local server is running</strong> and accessible.</li>
+                <li>Verify that the <strong>From URL</strong>, <strong>To URL</strong>, and <strong>Method</strong> are correctly configured.</li>
+                <li>Use <strong>Developer Tools → Network Tab</strong> in your browser to check if requests are redirected properly.</li>
             </ul>
         </section>
 
-        <section class="contact">
-            <h2>📧 Need Help?</h2>
-            <p>Email me at <a href="mailto:svfodekar@gmail.com">svfodekar@gmail.com</a> for assistance.</p>
-        </section>
+        <footer>
+            <p>📧 Need Help? Email me at <a href="mailto:svfodekar@gmail.com">svfodekar@gmail.com</a>.</p>
+        </footer>
     </div>
 </body>
 </html>
-
