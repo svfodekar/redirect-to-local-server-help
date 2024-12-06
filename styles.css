@@ -123,3 +123,74 @@ tr:hover {
     background: #d6eaff;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Examples Section */
+.examples {
+    background: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #495057;
+}
+
+.examples h4 {
+    color: #004085;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Placeholder Details */
+.placeholder {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    color: #856404;
+    font-size: 1em;
+}
+
+/* Troubleshooting Tips */
+.troubleshooting {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: #721c24;
+    font-size: 1em;
+}
+
+.troubleshooting ul {
+    margin-left: 20px;
+}
+
+.troubleshooting ul li {
+    color: #721c24;
+}
+
