@@ -31,3 +31,95 @@ h2 {
     font-size: 1.5em;
     color: #004085;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Key Features Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+ul li {
+    padding: 10px 0;
+    position: relative;
+    font-size: 1.1em;
+    color: #495057;
+}
+
+ul li::before {
+    content: '✔️';
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 10px;
+    position: absolute;
+    left: -20px;
+}
+
+/* Steps Styling */
+ol {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+ol li {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #6c757d;
+}
+
+ol li::before {
+    content: counter(step-counter) '. ';
+    counter-increment: step-counter;
+    color: #17a2b8;
+    font-weight: bold;
+}
+
+/* Reset counter for ordered lists */
+ol {
+    counter-reset: step-counter;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    color: #333;
+    background: #f8f9fa;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #d6eaff;
+}
+
