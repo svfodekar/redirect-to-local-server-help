@@ -3,99 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect to Local Server Extension</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Redirect to Local Server Chrome Extension</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Redirect to Local Server Chrome Extension</h1>
-        </header>
-        <section class="intro">
-            <p>
-                This is a powerful Chrome extension designed to simplify the workflow for developers working with live frontend applications and local backend servers. By enabling seamless redirection of API requests from the live frontend to your local server.
-            </p>
-            <p>
-                With this extension, developers can bypass the need for tools like Postman and Insomnia to test and debug API requests. Instead, you can test, debug, and integrate local backend server directly within your browser while maintaining the full functionality of a live frontend. 🚀
-            </p>
-        </section>
+    <h1>Redirect to Local Server Chrome Extension 🕹️</h1>
+    <p>This is a powerful Chrome extension designed to simplify the workflow for developers working with live frontend applications and local backend servers. By enabling seamless redirection of API requests from the live frontend to your local server.</p>
+    <p>With this extension, developers can bypass the need for tools like Postman and Insomnia to test and debug API requests. Instead, you can test, debug, and integrate local backend server directly within your browser while maintaining the full functionality of a live frontend. 🚀</p>
 
-        <section class="features">
-            <h2>🎯 Key Features:</h2>
+    <hr>
+    
+    <h2>🎯 Key Features:</h2>
+    <ul>
+        <li>Seamlessly connect your live frontend to a local server for <strong>real-time API testing</strong>.</li>
+        <li>Support redirection for both <strong>HTTP and HTTPS</strong> protocols.</li>
+        <li>Eliminate the need for tools like <strong>Postman or Insomnia</strong> by directly handling API requests in your browser.</li>
+        <li>Use placeholders (<code>#</code>) to <strong>dynamically support paths and query parameters</strong> for flexible redirection.</li>
+        <li><strong>Redirect a group of APIs</strong> with a single placeholder (<code>#</code>) for easier management.</li>
+        <li>Control which APIs and features are active with simple ON/OFF buttons for the extension.</li>
+    </ul>
+
+    <hr>
+    
+    <h2>🏄🏻‍♂️ How to Add APIs</h2>
+    <ol>
+        <li><strong>Click on the Yellow (+) icon</strong>.</li>
+        <li>Enter the following details:
             <ul>
-                <li>Seamlessly connect your live frontend to a local server for real-time API testing.</li>
-                <li>Eliminate the need for tools like Postman or Insomnia by directly handling API requests in your browser.</li>
-                <li>Use placeholders (#) to dynamically support paths and query parameters for flexible redirection.</li>
-                <li>Redirect a group of APIs with a single placeholder (#) for easier management.</li>
-                <li>Control which APIs and features are active with simple ON/OFF buttons for the extension.</li>
+                <li><strong>From URL</strong>: The live/staging API URL (e.g., <code>https://live-server-api.com/api/users</code>).</li>
+                <li><strong>To URL</strong>: Your local server URL (e.g., <code>http://localhost:3000/api/users</code>).</li>
+                <li><strong>Method</strong>: Choose the HTTP method (GET, POST, etc.).</li>
             </ul>
-        </section>
+        </li>
+        <li>Click <strong>Add Redirect</strong>.</li>
+        <li>Use the <strong>ON/OFF Toggle buttons</strong> to control the Extension and APIs.</li>
+        <li>When APIs are redirected to the local server, a <strong>blue popup message</strong> will appear in the bottom-right corner.</li>
+    </ol>
 
-        <section class="add-redirect">
-            <h2>🎯 How to Add a Redirect</h2>
-            <ol>
-                <li><strong>Click on the Yellow (+) icon.</strong></li>
-                <li>Enter the following details:
-                    <ul>
-                        <li><strong>From URL:</strong> The live/staging API URL (e.g., <code>https://live-api.com/api/users</code>).</li>
-                        <li><strong>To URL:</strong> Your local server URL (e.g., <code>http://localhost:3000/api/users</code>).</li>
-                        <li><strong>Method:</strong> Choose the HTTP method (GET, POST, etc.).</li>
-                    </ul>
-                </li>
-                <li>Click <strong>Add Redirect</strong>.</li>
-                <li>Use the <strong>ON/OFF Toggle buttons</strong> to control the Extension and APIs.</li>
-                <li>When APIs are redirected to the local server, a <strong>blue popup message</strong> will appear in the bottom-right corner.</li>
-            </ol>
-        </section>
+    <hr>
+    
+    <h2>📚 Examples: Redirecting Requests</h2>
+    
+    <h3>Example 1: Basic Redirects</h3>
+    <table border="1">
+        <tr>
+            <th>From URL</th>
+            <th>To URL</th>
+            <th>Method</th>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/add</td>
+            <td>http://some-other-server/api2/add2</td>
+            <td>GET</td>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/users</td>
+            <td>https://localhost:3000/api/users</td>
+            <td>GET</td>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/update</td>
+            <td>http://localhost:5000/api/update</td>
+            <td>PUT</td>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/remove</td>
+            <td>http://localhost:3000/api/remove</td>
+            <td>DELETE</td>
+        </tr>
+    </table>
 
-        <section class="examples">
-            <h2>📚 Examples: Redirecting Requests</h2>
-            <h3>Example 1: Basic Redirects</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Live URL (From)</th>
-                        <th>Local URL (To)</th>
-                        <th>Method</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>GET https://live-api.com/api/add</td>
-                        <td>GET http://some-other-server/api2/add</td>
-                        <td>GET</td>
-                    </tr>
-                    <tr>
-                        <td>GET https://live-api.com/api/users</td>
-                        <td>GET https://localhost:3000/api/users</td>
-                        <td>GET</td>
-                    </tr>
-                    <tr>
-                        <td>PUT https://live-api.com/api/update</td>
-                        <td>PUT http://localhost:5000/api/update</td>
-                        <td>PUT</td>
-                    </tr>
-                    <tr>
-                        <td>DELETE https://live-api.com/api/remove</td>
-                        <td>DELETE http://localhost:3000/api/remove</td>
-                        <td>DELETE</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <h3>Example 2: Handling Dynamic Path and Query Parameters with Placeholders (<code>#</code>)</h3>
+    <table border="1">
+        <tr>
+            <th>Live URL (From)</th>
+            <th>Local URL (To)</th>
+            <th>Method</th>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/user/#/profile</td>
+            <td>http://localhost:3000/api/user/#/profile</td>
+            <td>GET</td>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/item?id=#</td>
+            <td>http://localhost:3000/api/item?id=#</td>
+            <td>DELETE</td>
+        </tr>
+    </table>
+    <p><strong>How This Works</strong>: If the live URL is <code>GET https://live-server-api.com/api/user/123/profile</code>, the request will be redirected to <code>GET http://localhost:3000/api/user/123/profile</code>.</p>
+    <p>The <code>#</code> symbol acts as a <strong>placeholder</strong> for dynamic values (e.g., Path and Query Parameters).</p>
 
-        <section class="troubleshooting">
-            <h2>🔧 Troubleshooting Tips</h2>
+    <h3>Example 3: Redirect Multiple APIs with Patterns</h3>
+    <table border="1">
+        <tr>
+            <th>From URL</th>
+            <th>To URL</th>
+            <th>Method</th>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/api/#</td>
+            <td>http://localhost:3000/api/#</td>
+            <td>GET</td>
+        </tr>
+        <tr>
+            <td>https://live-server-api.com/#submit</td>
+            <td>http://localhost:3000/#submit</td>
+            <td>POST</td>
+        </tr>
+    </table>
+    <p><strong>How This Works</strong>:</p>
+    <ul>
+        <li><strong>Example 1:</strong> Any URL starting with <code>https://live-server-api.com/api/</code> will redirect to <code>http://localhost:3000/api/</code>.
             <ul>
-                <li>Make sure your <strong>local server is running</strong> and accessible.</li>
-                <li>Verify that the <strong>From URL</strong>, <strong>To URL</strong>, and <strong>Method</strong> are correctly configured.</li>
-                <li>Use <strong>Developer Tools → Network Tab</strong> in your browser to check if requests are redirected properly.</li>
+                <li>GET https://live-server-api.com/api/orders → GET http://localhost:3000/api/orders</li>
+                <li>GET https://live-server-api.com/api/products/123 → GET http://localhost:3000/api/products/123</li>
             </ul>
-        </section>
+        </li>
+        <li><strong>Example 2:</strong> Any URL ending with <code>/submit</code> will redirect:
+            <ul>
+                <li>POST https://live-server-api.com/orders/submit → POST http://localhost:3000/orders/submit</li>
+                <li>POST https://live-server-api.com/admin/selling/submit → POST http://localhost:3000/admin/selling/submit</li>
+                <li>POST https://live-server-api.com/admin/projectsubmit → POST http://localhost:3000/admin/projectsubmit</li>
+            </ul>
+        </li>
+    </ul>
 
-        <footer>
-            <p>📧 Need Help? Email me at <a href="mailto:svfodekar@gmail.com">svfodekar@gmail.com</a>.</p>
-        </footer>
-    </div>
+    <hr>
+    
+    <h2>🔧 Troubleshooting Tips</h2>
+    <ul>
+        <li>Make sure your <strong>local server is running</strong> and accessible.</li>
+        <li>Verify that the <strong>From URL</strong>, <strong>To URL</strong>, and <strong>Method</strong> are correctly configured.</li>
+        <li>Use <strong>Developer Tools → Network Tab</strong> in your browser to check if requests are redirected properly.</li>
+    </ul>
+
+    <hr>
+    
+    <h2>📮 Need Help?</h2>
+    <p>Email me at <a href="mailto:svfodekar@gmail.com">svfodekar@gmail.com</a> for any assistance.</p>
 </body>
 </html>
